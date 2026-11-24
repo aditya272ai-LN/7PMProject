@@ -30,5 +30,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/aditya272ai-ln/ragapi-demo:latest
+          tags: ghcr.io/aditya272ai-ln/ragapi-7pm:latest
 
