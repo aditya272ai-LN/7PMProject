@@ -9,3 +9,4 @@ faiss-cpu
 joblib
 fastapi
 uvicorn
+rank-bm25
