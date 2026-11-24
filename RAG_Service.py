@@ -2,11 +2,10 @@ from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
 from langchain_openai import OpenAIEmbeddings
 from langchain_core.prompts import PromptTemplate
-from langchain_groq import ChatGroq
 import joblib
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_cohere import CohereRerank
-from langsmith.client import Client
+from langchain_openai import ChatOpenAI
 
 
 #python -m pip install --upgrade langchain-core langchain-openai langchain-community langchain-classic
@@ -40,7 +39,7 @@ Note:Do not use your knowledge if conext is not sufficient to answer the query s
 ''',input_variables=['query','context']
 )
 
-llm=ChatGroq(model='openai/gpt-oss-120b')
+llm=ChatOpenAI(model='gpt-4o-mini')
 chain=template|llm
 
 def rag(query):
